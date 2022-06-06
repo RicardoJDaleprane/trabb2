@@ -5,7 +5,7 @@ function getLocation()
     {
     navigator.geolocation.getCurrentPosition(showPosition,showError);
     }
-  else{x.innerHTML="Seu browser não suporta Geolocalização.";}
+  else{alert("Seu browser não suporta Geolocalização.");}
   }
 function showPosition(position)
   {
@@ -22,16 +22,16 @@ function showError(error)
   switch(error.code)
     {
     case error.PERMISSION_DENIED:
-      x.innerHTML="Usuário rejeitou a solicitação de Geolocalização."
+      alert("Usuário rejeitou a solicitação de Geolocalização.")
       break;
     case error.POSITION_UNAVAILABLE:
-      x.innerHTML="Localização indisponível."
+      alert("Localização indisponível.")
       break;
     case error.TIMEOUT:
-      x.innerHTML="A requisição expirou."
+      alert("A requisição expirou.")
       break;
     case error.UNKNOWN_ERROR:
-      x.innerHTML="Algum erro desconhecido aconteceu."
+      alert("Algum erro desconhecido aconteceu.")
       break;
     }
   }
